@@ -1,7 +1,10 @@
+import { Preload } from "./components/Preload"
 
 export const App = () => {
 
   return (
-    <div>App</div>
+    <div>
+      <Preload />
+    </div>
   )
 }

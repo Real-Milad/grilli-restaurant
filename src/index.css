@@ -1,3 +1,169 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Forum&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gwendolyn:wght@400;700&display=swap');
 @import "tailwindcss";
+
+
+
+@theme {
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-davys-grey: #595754;
+  --color-gold-crayola: #e4c590;
+  --color-quick-silver: #a6a6a6;
+  --color-smoky-black-1: #0e0d0b;
+  --color-smoky-black-2: #0e0d0c;
+  --color-smoky-black-3: #121111;
+  --color-eerie-black-1: #161718;
+  --color-eerie-black-2: #1b1c1d;
+  --color-eerie-black-3: #141515;
+  --color-eerie-black-4: #212121;
+  --color-white-alpha-20: #ffffff33;
+  --color-white-alpha-10: #ffffff1a;
+  --color-black-alpha-80: #000000cc;
+  --color-black-alpha-15: #00000026;
+
+  --font-primary: 'DM Sans', sans-serif;
+  --font-secondary: 'Forum', serif;
+  --font-gwen: "Gwendolyn", cursive;
+
+  --loading-text-gradient: linear-gradient(90deg, transparent 0% 16.66%, #b59763 33.33% 50%,  transparent 66.66% 75%);
+  --gradient-1: linear-gradient(to top,#000000e6,#000000b3,transparent);
+
+  --fontSize-display-1: calc(1.3rem + 6.7vw);
+  --fontSize-headline-1: calc(2rem + 2.5vw);
+  --fontSize-headline-2: calc(1.3rem + 2.4vw);
+  --fontSize-title-1: calc(1.6rem + 1.2vw);
+  --fontSize-title-2: 2.2rem;
+  --fontSize-title-3: 2.1rem;
+  --fontSize-title-4: calc(1.6rem + 1.2vw);
+  --fontSize-body-1: 2.4rem;
+  --fontSize-body-2: 1.6rem;
+  --fontSize-body-3: 1.8rem;
+  --fontSize-body-4: 1.6rem;
+  --fontSize-label-1: 1.4rem;
+  --fontSize-label-2: 1.2rem;
+
+  --weight-regular: 400;
+  --weight-bold: 700;
+
+  --lineHeight-1: 1em;
+  --lineHeight-2: 1.2em;
+  --lineHeight-3: 1.5em;
+  --lineHeight-4: 1.6em;
+  --lineHeight-5: 1.85em;
+  --lineHeight-6: 1.4em;
+
+  --letterSpacing-1: 0.15em;
+  --letterSpacing-2: 0.4em;
+  --letterSpacing-3: 0.2em;
+  --letterSpacing-4: 0.3em;
+  --letterSpacing-5: 3px;
+
+  --section-space: 70px;
+
+  --shadow-1: 0px 0px 25px 0px #00000040;
+
+  --radius-24: 24px;
+  --radius-circle: 50%;
+
+  --transition-1: 250ms ease;
+  --transition-2: 500ms ease;
+  --transition-3: 1000ms ease;
+}
+
+
+@layer base {
+  *::before, *::after {
+    @apply m-0 p-0 box-border
+  }
+
+  a, img, data, span, input, button, select, textarea, ion-icon {
+    @apply block
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  img {
+    @apply h-auto
+  }
+
+  input, button, select, textarea {
+    @apply bg-none border-none 
+  }
+
+  input, select, textarea {
+    @apply w-full outline-none
+  }
+
+  button {
+    @apply cursor-pointer
+  }
+
+  address {
+    @apply not-italic
+  }
+
+  html {
+    @apply scroll-smooth text-[10px]
+  }
+
+  body {
+    color: white;
+    font-family: var(--font-primary);
+    background-color: var(--color-eerie-black-1);
+    font-size: var(--fontSize-body-4);
+    font-weight: var(--weight-regular);
+    line-height: var(--lineHeight-5);
+    overflow: hidden;
+    height: 300vh;
+  }
+
+  body.loaded {
+    overflow: overlay;
+  }
+
+  body.nav-active {
+    overflow: hidden;
+  }
+
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--color-gold-crayola);
+  }
+}
+
+
+@layer components {
+
+  .flex-center { @apply flex items-center justify-center }
+
+
+  /* MARK: PreLoad Styles 
+  */
+  .preload > * { @apply duration-250 }
+  .preload.loaded > * { @apply opacity-0 }
+  .preload.loaded { @apply delay-500 duration-900 translate-y-full }
+  .preload { @apply fixed inset-0 flex-col duration-400 z-10 bg-gold-crayola }
+  .circle { @apply size-45 mb-11 border-3 rounded-circle animate-spin border-[#ecdbbd] border-t-[#b59763] }
+  .preload .text { @apply bg-size-[500%] text-[90px] font-bold font-gwen leading-60 tracking-[16px] ps-4 bg-clip-text text-transparent }
+  .preload .text {
+    background-image: var(--loading-text-gradient);
+    animation: load 2s linear infinite;
+  }
+  @keyframes load {
+    0% {background-position: 100%;}
+    100% {background-position: 0%;}
+  }
+
+}
