@@ -26,6 +26,7 @@
   --font-primary: 'DM Sans', sans-serif;
   --font-secondary: 'Forum', serif;
   --font-gwen: "Gwendolyn", cursive;
+  --background-image-loading-text: linear-gradient(90deg, transparent 0% 16.66%, #b59763 33.33% 50%, transparent 66.66% 75%);
 
   --loading-text-gradient: linear-gradient(90deg, transparent 0% 16.66%, #b59763 33.33% 50%,  transparent 66.66% 75%);
   --gradient-1: linear-gradient(to top,#000000e6,#000000b3,transparent);
@@ -139,7 +140,7 @@
   }
 
   ::-webkit-scrollbar-thumb {
-    background-color: var(--color-gold-crayola);
+    background-color: rgba(65, 65, 65, 0.557)
   }
 }
 
@@ -232,37 +233,93 @@
 
 
 
-  /*MARK: PreLoad Styles 
-  */
-  .preload > * { @apply duration-250 }
-  .preload.loaded > * { @apply opacity-0 }
-  .preload.loaded { @apply delay-500 duration-900 translate-y-full }
-  .preload { @apply fixed inset-0 flex-col duration-400 z-10 bg-gold-crayola }
-  .circle { @apply size-45 mb-11 border-3 rounded-circle animate-spin border-[#ecdbbd] border-t-[#b59763] }
-  .preload .text { @apply bg-size-[500%] text-[90px] font-bold font-gwen leading-60 tracking-[16px] ps-4 bg-clip-text text-transparent }
-  .preload .text {
-    background-image: var(--loading-text-gradient);
-    animation: load 2s linear infinite;
-  }
-  @keyframes load {
-    0% {background-position: 100%;}
-    100% {background-position: 0%;}
-  }
+
+
+
+
+
+
+  
 
 
 
   /*MARK: Header  
   */
-  .navbar, .overlay, .header .btn {
+  .overlay {
     display: none;
   }
 
-  .nav-open-btn .line-2 { animation-delay: 150ms; }
-  .nav-open-btn .line-3 { animation-delay: 300ms; }
 
-  
+
+  .navbar {
+    position: fixed;
+    background-color: var(--color-eerie-black-3);
+    top: 0;
+    left: -360px;
+    bottom: 0;
+    max-width: 360px;
+    width: 100%;
+    padding-inline: 30px;
+    padding-block-end: 50px;
+    overflow-y: auto;
+    visibility: hidden;
+    z-index: 2;
+    transition: var(--transition-2);
+  }
+
+  .navbar.active {
+    visibility: visible;
+    transform: translateX(360px);
+  }
+
+  .navbar .close-btn {
+    color: white;
+    border: 1px solid currentColor;
+    padding: 4px;
+    border-radius: var(--radius-circle);
+    margin-inline-start: auto;
+    margin-block: 30px 20px;
+  }
+
+  .navbar .close-btn ion-icon {
+    --ionicon-stroke-width: 40px
+  }
+
+  .navbar .close-btn:is(:hover, :focus-within){
+    color: var(--color-gold-crayola);
+  }
+
+  .navbar-item {
+    border-block-start: 1px solid var(--color-white-alpha-20);
+  }
+
+  .navbar-link {
+    position: relative;
+    font-size: var(--fontSize-label-2);
+    text-transform: uppercase;
+    padding-block: 10px;
+    /* max-width: unset; */
+  }
+
+  .navbar-link::after {
+    display: block;
+  }
 
 }
+
+
+
+
+
+
+/* Preload Animation Loading Text */
+@keyframes loadingText {
+  0% {background-position: 100%;}
+  100% {background-position: 0%;}
+}
+
+
+
 
 @keyframes menuBtn {
   0% { transform: scaleX(1);}
