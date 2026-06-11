@@ -1,4 +1,4 @@
-import logo from "../assets/logo.svg"
+import logo from "../assets/logo.svg";
 import { CgMenuRight } from "react-icons/cg"
 import { MobileNavbar } from "./MobileNavbar";
 import { useEffect, useRef, useState } from "react";
@@ -6,49 +6,49 @@ import { useEffect, useRef, useState } from "react";
 const navItems = ["Home", "Menu", "About Us", "Our Chefs", "Contact"];
 
 export const Header = () => {
-  const [toggleMenu, setToggleMenu] = useState(false)
-  const [scroll, setScroll] = useState(false)
-  const headerRef = useRef(null)
+  const [scroll, setScroll] = useState(false);
+  const headRef = useRef(null)
+  const [toggleMenu, setToggleMenu] = useState(false);
 
-  let lastScrollPos = 0
+  let lastScrollPos = 0;
 
   const hideHeader = () => {
-    const isScrollbottom = lastScrollPos < window.scrollY
-    if (isScrollbottom) {
-      headerRef.current.classList.add("hide")
-    } else {
-      headerRef.current.classList.remove("hide")
-    }
+    const isScrollbottom = lastScrollPos < window.scrollY;
 
-    lastScrollPos = window.scrollY
-  }
+    isScrollbottom 
+    ? headRef.current.style.transform = "translateY(-100%)"
+    : headRef.current.style.transform = "translateY(0)"
+
+    lastScrollPos = window.scrollY;
+  };
 
   window.addEventListener('scroll', () => {
     if (window.scrollY >= 50) {
-      setScroll(true)
+      setScroll(true) 
       hideHeader()
     } else {
       setScroll(false)
     }
-  })
-
-
+  });
 
   useEffect(() => {
-    if (toggleMenu) {
-      document.body.style.overflow = "hidden"
-    } else {
-      document.body.style.overflow = "auto"
-    }
+    toggleMenu
+    ? document.body.style.overflow = "hidden"
+    : document.body.style.overflow = "auto";
+    
+    return () => document.body.style.overflow = "auto";
+  }, [toggleMenu]);
 
-    return () => {
-      document.body.style.overflow = "auto"
-    }
-  }, [toggleMenu])
+
 
   return (
     <>
-      <header ref={headerRef} className={`header flex justify-between items-center  px-5 md:py-20 lg:py-30 lg:px-15 ${scroll && "active"}`}>
+      <header ref={headRef} className={`
+        fixed top-0 left-0 w-full z-4 transition-all duration-600 flex justify-between items-center 
+        px-5 md:px-12 lg:px-20  
+        ${scroll ? "py-10 md:py-12 lg:py-12 bg-eerie-black-4" : "py-15 md:py-20 lg:py-30 bg-transparent"}
+      `}>
+
 
         <div className="flex flex-1"> 
           <a href=""> <img src={logo} alt="Grili" width={170} height={60}/> </a>
