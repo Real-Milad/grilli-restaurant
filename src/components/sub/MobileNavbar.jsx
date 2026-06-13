@@ -1,4 +1,4 @@
-import logo from "../assets/logo.svg"
+import logo from "../../assets/logo.svg"
 const navItems = ["Home", "Menu", "About Us", "Our Chefs", "Contact"];
 
 

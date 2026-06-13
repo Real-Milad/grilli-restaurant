@@ -179,30 +179,20 @@
     line-height: var(--lineHeight-1);
   }
 
-  .headline-1 {
-    font-size: var(--fontSize-headline-1);
-  }
+  .headline-1 { font-size: var(--fontSize-headline-1); }
 
   .headline-2 {
     font-size: var(--fontSize-headline-2);
     line-height: var(--lineHeight-6);
   }
 
-  .title-1 {
-    font-size: var(--fontSize-title-1);
-  }
+  .title-1 { font-size: var(--fontSize-title-1); }
 
-  .title-2 {
-    font-size: var(--fontSize-title-2);
-  }
+  .title-2 { font-size: var(--fontSize-title-2); }
 
-  .title-3 {
-    font-size: var(--fontSize-title-3);
-  }
+  .title-3 { font-size: var(--fontSize-title-3); }
 
-  .title-4 {
-    font-size: var(--fontSize-title-4);
-  }
+  .title-4 { font-size: var(--fontSize-title-4); }
 
   .body-1 {
     font-size: var(--fontSize-body-1);
@@ -214,40 +204,18 @@
     line-height: var(--lineHeight-4);
   }
 
-  .body-3 {
-    font-size: var(--fontSize-body-3);
-  }
+  .body-3 { font-size: var(--fontSize-body-3); }
 
-  .body-4 {
-    font-size: var(--fontSize-body-4);
-  }
+  .body-4 { font-size: var(--fontSize-body-4); }
 
-  .label-1 {
-    font-size: var(--fontSize-label-1);
-  }
+  .label-1 { font-size: var(--fontSize-label-1); }
 
-  .label-2 {
-    font-size: var(--fontSize-label-2);
-  }
-
-
-
-
-
-
-
-
-
-
-  
+  .label-2 { font-size: var(--fontSize-label-2); }
 
 
 
   /*MARK: Header  
   */
-
-
-
   .navbar {
     position: fixed;
     background-color: var(--color-eerie-black-3);
@@ -302,20 +270,6 @@
     display: block;
   }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   .overlay {
     position: fixed;
     inset: 0;
@@ -330,13 +284,7 @@
     opacity: 1;
     pointer-events: all;
   }
-
 }
-
-
-
-
-
 
 /* Preload Animation Loading Text */
 @keyframes loadingText {
@@ -344,13 +292,16 @@
   100% {background-position: 0%;}
 }
 
-
-
-
 @keyframes menuBtn {
   0% { transform: scaleX(1);}
   100% {transform: scaleX(0.5);}
 }
 
 
+
+
+
+
+/* MARK: 
+*/
 

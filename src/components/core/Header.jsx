@@ -1,7 +1,7 @@
-import logo from "../assets/logo.svg";
+import logo from "../../assets/logo.svg";
 import { CgMenuRight } from "react-icons/cg"
-import { MobileNavbar } from "./MobileNavbar";
 import { useEffect, useRef, useState } from "react";
+import { MobileNavbar } from "../sub/MobileNavbar";
 
 const navItems = ["Home", "Menu", "About Us", "Our Chefs", "Contact"];
 

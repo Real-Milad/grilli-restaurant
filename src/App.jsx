@@ -1,5 +1,5 @@
-import { Header } from "./components/Header"
-import { Preload } from "./components/Preload"
+import { Header } from "./components/core/Header"
+import { Preload } from "./components/core/Preload"
 
 export const App = () => {
 
