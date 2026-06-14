@@ -44,7 +44,7 @@ export const Header = () => {
   return (
     <>
       <header ref={headRef} className={`
-        fixed top-0 left-0 w-full z-4 transition-all duration-600 flex justify-between items-center 
+        fixed top-0 left-0 w-full z-10 transition-all duration-600 flex justify-between items-center 
         px-5 md:px-12 lg:px-20  
         ${scroll ? "py-10 md:py-12 lg:py-12 bg-eerie-black-4" : "py-15 md:py-20 lg:py-30 bg-transparent"}
       `}>
@@ -69,7 +69,6 @@ export const Header = () => {
           </a>
         </div>
 
-        <MobileNavbar toggleMenu={toggleMenu} setToggleMenu={setToggleMenu} />
 
         <div className="flex justify-end flex-1 lg:hidden">
           <CgMenuRight onClick={() => setToggleMenu(true)} className="text-6xl cursor-pointer hover:text-gold-crayola transition"/>
@@ -77,7 +76,8 @@ export const Header = () => {
 
       </header>
 
-      <div className={`fixed inset-0 bg-black-alpha-80 transition z-1 opacity-0 pointer-events-none ${toggleMenu && "opacity-100 pointer-events-auto"}`}></div>
+      <MobileNavbar toggleMenu={toggleMenu} setToggleMenu={setToggleMenu} />
+      <div className={`overlay fixed inset-0 bg-black-alpha-80 transition z-2 opacity-0 pointer-events-none ${toggleMenu && "opacity-100 pointer-events-auto"}`}></div>
     </>
   )
 }
