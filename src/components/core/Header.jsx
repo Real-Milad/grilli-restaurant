@@ -46,7 +46,7 @@ export const Header = () => {
       <header ref={headRef} className={`
         fixed top-0 left-0 w-full z-10 transition-all duration-600 flex justify-between items-center 
         px-5 md:px-12 lg:px-20  
-        ${scroll ? "py-10 md:py-12 lg:py-12 bg-eerie-black-4" : "py-15 md:py-20 lg:py-30 bg-transparent"}
+        ${scroll ? "py-8 md:py-12 lg:py-12 bg-eerie-black-4" : "py-15 md:py-20 lg:py-30 bg-transparent"}
       `}>
 
 
