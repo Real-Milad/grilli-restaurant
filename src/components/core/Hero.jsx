@@ -11,6 +11,10 @@ const slides = [
   {image: slider3, subtitle: 'amazing & delicious', title1: 'Where a Flavor', title2: 'Tell a Story' }
 ]
 
+const main = "Milad"
+const main2 = "Yes"
+
+
 export const Hero = () => {
 
   const [index, setIndex] = useState(0);
@@ -43,18 +47,21 @@ export const Hero = () => {
             <img src={slide.image} key={i} width={1880} height={950} className="w-full h-full object-cover"/>
           </div>
 
-          <p className="slider-reveal text-[14px] relative font-bold tracking-[5px] uppercase text-gold-crayola mb-4">
+          <p className="slider-reveal text-[10px] relative font-bold tracking-[5px] uppercase text-gold-crayola mb-4 
+            md:text-[18px] lg:text-[15px] lg:mt-60">
             {slide.subtitle}
           </p>
 
-          <img src={seperator} className="slider-reveal w-50 mx-auto mb-15"/>
+          <img src={seperator} className="slider-reveal w-50 mx-auto mb-15 md:mb-25 lg:mb-30 "/>
 
-          <h1 className="hero-title slider-reveal text-[50px] leading-20 tracking-[5px] font-Italianno mb-9">
+          <h1 className="hero-title slider-reveal text-[50px] leading-20 tracking-[5px] font-Italianno mb-9 
+            md:text-[98px] md:leading-35 md:mb-20 lg:text-[140px] lg:leading-50 lg:mb-30">
             {slide.title1} <br /> {slide.title2}
           </h1>
           
-          <p className="hero-text slider-reveal font-primary tracking-wider mb-10">
-            Come with family & feel the joy of <br /> mouthwatering food
+          <p className="hero-text text-gold-crayola/80 slider-reveal font-primary tracking-wider mb-10
+            md:text-[20px] md:mb-20 lg:text-[22px] w-110 md:w-150 lg:w-300 mx-auto">
+            Come with family & feel the joy of mouthwatering food
           </p>
 
           <a href="#" className="btn mx-auto btn-primary slider-reveal">
@@ -65,18 +72,21 @@ export const Hero = () => {
         </div>
       )}
 
-      <button className="slider-btn prev hidden">
-        <ion-icon name="chevron-back"></ion-icon>
+
+      <button onClick={prev} className="absolute top-1/2 left-14 translate-y-[-50%] z-5 text-5xl text-gold-crayola hidden size-18 md:grid place-items-center  rotate-45 border border-gold-crayola hover:bg-gold-crayola hover:text-black transition duration-500 ">
+        <ion-icon name="chevron-back" className="-rotate-45"></ion-icon>
       </button>
 
-      <button className="slider-btn next hidden">
-        <ion-icon name="chevron-forward"></ion-icon>
+      <button onClick={next} className="absolute top-1/2 right-14 translate-y-[-50%] z-5 text-5xl text-gold-crayola hidden size-18 md:grid place-items-center  rotate-45 border border-gold-crayola hover:bg-gold-crayola hover:text-black transition duration-500 ">
+        <ion-icon name="chevron-forward" className="-rotate-45"></ion-icon>
       </button>
+
 
       <a href="#" className="
         absolute bottom-12 right-1/2 z-2 size-34 p-3 translate-x-1/2 bg-gold-crayola
         after:content-[''] after:absolute after:inset-0 after:border after:border-gold-crayola 
-        after:animate-[spin_9s_infinite_linear]
+        after:animate-[spin_9s_infinite_linear] md:bottom-15
+        lg:right-35 lg:bottom-20
       ">
         <img src={heroIcon} alt="booking-icon" width={40} height={40} className="mx-auto mb-2"/>
 

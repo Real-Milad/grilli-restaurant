@@ -80,7 +80,7 @@
     @apply m-0 p-0 box-border
   } */
 
-  a, img, data, span, input, button, select, textarea, ion-icon {
+  a, img, data, span, input, select, textarea {
     @apply block
   }
 
@@ -93,7 +93,7 @@
     @apply h-auto
   }
 
-  input, button, select, textarea {
+  input, select, textarea {
     @apply bg-none border-none 
   }
 
@@ -101,9 +101,6 @@
     @apply w-full outline-none
   }
 
-  button {
-    @apply cursor-pointer
-  }
 
   address {
     @apply not-italic
