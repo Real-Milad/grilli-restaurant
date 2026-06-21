@@ -16,7 +16,7 @@ export const Preload = () => {
   return (
     <div className={`
       fixed inset-0 flex-center flex-col bg-gold-crayola duration-400
-      z-10 ${load && "delay-500 duration-900 translate-y-full"}`}>
+      z-80 ${load && "delay-500 duration-900 translate-y-full"}`}>
 
       {/* Loading Circle */}
       <div className={`

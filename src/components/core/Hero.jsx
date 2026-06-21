@@ -4,6 +4,7 @@ import seperator from "../../assets/separator.svg"
 import slider1 from "../../assets/hero-slider-1.jpg"
 import slider2 from "../../assets/hero-slider-2.jpg"
 import slider3 from "../../assets/hero-slider-3.jpg"
+import { Button } from "../shared/Button"
 
 const slides = [
   {image: slider1, subtitle: 'Tradational & Hygine', title1: 'For The Love of', title2: 'Delicious Food' },
@@ -47,15 +48,15 @@ export const Hero = () => {
             <img src={slide.image} key={i} width={1880} height={950} className="w-full h-full object-cover"/>
           </div>
 
-          <p className="slider-reveal text-[10px] relative font-bold tracking-[5px] uppercase text-gold-crayola mb-4 
-            md:text-[18px] lg:text-[15px] lg:mt-60">
+          <p className="slider-reveal text-[10px] relative font-bold tracking-[5px] mx-auto uppercase text-gold-crayola mb-4 
+            md:text-[18px] lg:text-[15px] lg:mt-50 ">
             {slide.subtitle}
           </p>
 
-          <img src={seperator} className="slider-reveal w-50 mx-auto mb-15 md:mb-25 lg:mb-30 "/>
+          <img src={seperator} className="slider-reveal w-50 mx-auto mb-15 md:mb-20  "/>
 
-          <h1 className="hero-title slider-reveal text-[50px] leading-20 tracking-[5px] font-Italianno mb-9 
-            md:text-[98px] md:leading-35 md:mb-20 lg:text-[140px] lg:leading-50 lg:mb-30">
+          <h1 className="hero-title slider-reveal text-neutral-300 text-[60px] leading-25 tracking-[5px] font-Italianno mb-9 
+            md:text-[98px] md:leading-35 md:mb-20 lg:text-[160px] lg:tracking-[9px] lg:leading-60 lg:mb-25">
             {slide.title1} <br /> {slide.title2}
           </h1>
           
@@ -64,6 +65,7 @@ export const Hero = () => {
             Come with family & feel the joy of mouthwatering food
           </p>
 
+          {/* <Button title="View Our Menu" /> */}
           <a href="#" className="btn mx-auto btn-primary slider-reveal">
             <span className="text text-1">View Our Menu</span>
             <span className="text text-2">View Our Menu</span>

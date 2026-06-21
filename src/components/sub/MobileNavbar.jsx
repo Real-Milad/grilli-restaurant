@@ -7,22 +7,22 @@ export const MobileNavbar = ({toggleMenu, setToggleMenu}) => {
   return (
     <nav className={`navbar ${toggleMenu && "active"}`}>
 
-      <button className="close-btn" onClick={() => setToggleMenu(false)}>
+      <button className="close-btn absolute top-10 right-10 text-[20px] border border-white grid place-items-center rounded-full p-2 hover:text-gold-crayola hover:border-gold-crayola transition duration-500 " onClick={() => setToggleMenu(false)}>
         <ion-icon name="close-outline"></ion-icon>
       </button>
 
-      <a href="#" className="logo max-w-max mx-auto mb-14"> 
+      <a href="#" className="logo max-w-max mx-auto mb-14 mt-35"> 
         <img src={logo} alt="Grili" width={160} height={50}/>
       </a>
 
 
       <ul className="navbar-list border-be border-be-white-alpha-20 mb-24">
         {navItems.map(item => <li key={item} className="navbar-item">
-          <a href={`#${item}`} className={`navbar-link group relative text-[19px] uppercase py-6 max-w  
+          <a href={`#${item}`} className={`navbar-link group relative transition duration-500 text-[19px] uppercase py-6 max-w  
             ${item === "Home" && "active"}`}>
 
             <div className={`separator absolute top-1/2 left-0 -mt-1 group-hover:opacity-100 -translate-y-1/2 
-            transition-[250ms] ${item === "Home" ? "opacity-100" : "opacity-0"}`}></div>
+            transition-all duration-300 ${item === "Home" ? "opacity-100" : "opacity-0"}`}></div>
 
             <span className={`text-[14px] tracking-widest group-hover:text-gold-crayola transition
             ${item === "Home" ? "text-gold-crayola ml-5 translate-x-5" : "group-hover:translate-x-10"}`}>

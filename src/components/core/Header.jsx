@@ -77,7 +77,7 @@ export const Header = () => {
       </header>
 
       <MobileNavbar toggleMenu={toggleMenu} setToggleMenu={setToggleMenu} />
-      <div className={`overlay fixed inset-0 bg-black-alpha-80 transition z-2 opacity-0 pointer-events-none ${toggleMenu && "opacity-100 pointer-events-auto"}`}></div>
+      <div className={`overlay fixed inset-0 bg-black-alpha-80 transition duration-500 z-2 opacity-0 pointer-events-none ${toggleMenu && "opacity-100 pointer-events-auto"}`}></div>
     </>
   )
 }

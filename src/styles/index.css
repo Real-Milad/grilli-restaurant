@@ -30,7 +30,8 @@
   --font-Italianno: "Italianno", cursive;
 
   --background-image-loading-text: linear-gradient(90deg, transparent 0% 16.66%, #b59763 33.33% 50%, transparent 66.66% 75%);
-  --gradient-1: linear-gradient(to top,#000000e6,#000000b3,transparent);
+  --background-image-gradient-hover: linear-gradient(to right, transparent 0%, transparent 0%, #fff6 100%);
+  --background-image-gradient-1: linear-gradient(to top,#000000e6,#000000b3,transparent);
 
   --fontSize-display-1: calc(1.3rem + 6.7vw);
   --fontSize-headline-1: calc(2rem + 2.5vw);
@@ -236,18 +237,6 @@
     transform: translateX(360px);
   }
 
-  .navbar .close-btn {
-    color: white;
-    border: 1px solid currentColor;
-    padding: 4px;
-    border-radius: var(--radius-circle);
-    margin-inline-start: auto;
-    margin-block: 30px 20px;
-  }
-
-  .navbar .close-btn ion-icon {
-    --ionicon-stroke-width: 40px
-  }
 
   .navbar .close-btn:is(:hover, :focus-within){
     color: var(--color-gold-crayola);
@@ -390,3 +379,10 @@
 
 
 
+
+/* Shape Service Section Animation */
+@keyframes move {
+  0%   { transform: translateY(0px);}
+  50%  { transform: translateY(20px);}
+  100% { transform: translateY(0px);}
+}
