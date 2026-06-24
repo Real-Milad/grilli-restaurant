@@ -22,7 +22,7 @@ export const Service = () => {
   return (
     <div className="bg-smoky-black-2 w-full pt-30 flex-center flex-col relative overflow-hidden">
       <Subtitle title="Flavors For Royalty" />
-      <h1 className="font-Italianno text-7xl tracking-widest my-13 lg:text-8xl">We Offer Top Notch</h1>
+      <h1 className="font-Story text-[42px] md:text-[50px] md:mb-17 tracking-widest my-13 lg:text-8xl">We Offer Top Notch</h1>
 
       <p className="text-center w-150 mb-30">
         Lorem Ipsum is simply dummy text of the printing 

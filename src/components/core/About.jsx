@@ -36,7 +36,7 @@ export const About = () => {
       <div className="flex-1">
         <Subtitle title="Our Story"/>
 
-        <h1 className="text-7xl tracking-wide font-Italianno mt-20 mb-15 md:text-8xl lg:text-9xl">Every Fla vor Tells a Story</h1>
+        <h1 className="text-6xl tracking-wide font-Story mt-20 mb-15 md:text-8xl lg:text-8xl">Every Flavor Tells a Story</h1>
 
         <p className="px-8 text-[17px] mb-15 md:px-35 md:text-[18px]">
           Lorem Ipsum is simply dummy text of the printingand typesetting industry lorem Ipsum has 

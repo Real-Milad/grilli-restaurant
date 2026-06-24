@@ -55,8 +55,8 @@ export const Hero = () => {
 
           <img src={seperator} className="slider-reveal w-50 mx-auto mb-15 md:mb-20  "/>
 
-          <h1 className="hero-title slider-reveal text-neutral-300 text-[60px] leading-25 tracking-[5px] font-Italianno mb-9 
-            md:text-[98px] md:leading-35 md:mb-20 lg:text-[160px] lg:tracking-[9px] lg:leading-60 lg:mb-25">
+          <h1 className="hero-title slider-reveal text-neutral-300 text-[50px] leading-25 tracking-[5px] font-Story mb-9 
+            md:text-[75px] md:leading-35 md:mb-20 lg:text-[120px] lg:tracking-[9px] lg:leading-60 lg:mb-25">
             {slide.title1} <br /> {slide.title2}
           </h1>
           

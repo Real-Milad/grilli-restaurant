@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Forum&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Gwendolyn:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Story+Script&display=swap');
 @import "tailwindcss";
 
 
@@ -28,6 +29,7 @@
   --font-secondary: 'Forum', serif;
   --font-gwen: "Gwendolyn", cursive;
   --font-Italianno: "Italianno", cursive;
+  --font-Story: "Story Script", sans-serif;
 
   --background-image-loading-text: linear-gradient(90deg, transparent 0% 16.66%, #b59763 33.33% 50%, transparent 66.66% 75%);
   --background-image-gradient-hover: linear-gradient(to right, transparent 0%, transparent 0%, #fff6 100%);
@@ -81,7 +83,7 @@
     @apply m-0 p-0 box-border
   } */
 
-  a, img, data, span, input, select, textarea {
+  a, img, data, input, select, textarea {
     @apply block
   }
 
@@ -386,3 +388,4 @@
   50%  { transform: translateY(20px);}
   100% { transform: translateY(0px);}
 }
+
