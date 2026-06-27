@@ -1,8 +1,10 @@
 import { About } from "./components/core/About"
+import { BookOnline } from "./components/core/BookOnline"
 import { Header } from "./components/core/Header"
 import { Hero } from "./components/core/Hero"
 import { Menu } from "./components/core/Menu"
 import { Preload } from "./components/core/Preload"
+import { Reserve } from "./components/core/Reserve"
 import { Service } from "./components/core/Service"
 import { Special } from "./components/core/Special"
 
@@ -17,6 +19,7 @@ export const App = () => {
       <About />
       <Special />
       <Menu />
+      <Reserve />
     </div>
   )
 }

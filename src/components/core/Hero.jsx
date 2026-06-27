@@ -92,7 +92,7 @@ export const Hero = () => {
       ">
         <img src={heroIcon} alt="booking-icon" width={40} height={40} className="mx-auto mb-2"/>
 
-        <span className="text-[10px] leading-6 font-bold text-black uppercase tracking-wide">Book A Table</span> 
+        <span className="text-[10px] font-bold text-black uppercase tracking-wide">Book A Table</span> 
       </a>
       
     </section>

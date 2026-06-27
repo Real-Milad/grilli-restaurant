@@ -34,6 +34,7 @@
   --background-image-loading-text: linear-gradient(90deg, transparent 0% 16.66%, #b59763 33.33% 50%, transparent 66.66% 75%);
   --background-image-gradient-hover: linear-gradient(to right, transparent 0%, transparent 0%, #fff6 100%);
   --background-image-gradient-1: linear-gradient(to top,#000000e6,#000000b3,transparent);
+  
 
   --fontSize-display-1: calc(1.3rem + 6.7vw);
   --fontSize-headline-1: calc(2rem + 2.5vw);
@@ -83,7 +84,7 @@
     @apply m-0 p-0 box-border
   } */
 
-  a, img, data, input, select, textarea {
+  a, img, data, select, textarea {
     @apply block
   }
 
@@ -96,13 +97,7 @@
     @apply h-auto
   }
 
-  input, select, textarea {
-    @apply bg-none border-none 
-  }
 
-  input, select, textarea {
-    @apply w-full outline-none
-  }
 
 
   address {
@@ -315,7 +310,18 @@
 
 
 
-
+.btn1 {
+  position: relative;
+  color: var(--color-gold-crayola);
+  font-size: var(--fontSize-label-2);
+  font-weight: var(--weight-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--letterSpacing-5);
+  border: 2px solid var(--color-gold-crayola);
+  padding: 12px 45px;
+  overflow: hidden;
+  z-index: 1;
+}
 
 
 
@@ -334,7 +340,7 @@
   overflow: hidden;
   z-index: 1;
 }
-.btn::before {
+.btn::before, .btn1::before {
   content: "";
   position: absolute;
   bottom: 100%;
@@ -347,10 +353,10 @@
   transition: var(--transition-2);
   z-index: -1;
 }
-.btn .text {
+.btn .text, .btn1 .text {
   transition: var(--transition-1);
 }
-.btn .text-2 {
+.btn .text-2, .btn1 .text-2 {
   position: absolute;
   top: 100%;
   left: 50%;
@@ -358,13 +364,13 @@
   min-width: max-content;
   color: var(--color-smoky-black-1);
 }
-.btn:is(:hover, :focus-visible)::before {
+.btn:is(:hover, :focus-visible)::before, .btn1:is(:hover, :focus-visible)::before {
   bottom: -50%;
 } 
-.btn:is(:hover, :focus-visible) .text-1 {
+.btn:is(:hover, :focus-visible) .text-1, .btn1:is(:hover, :focus-visible) .text-1 {
   transform: translateY(-40px);
 } 
-.btn:is(:hover, :focus-visible) .text-2 {
+.btn:is(:hover, :focus-visible) .text-2, .btn1:is(:hover, :focus-visible) .text-2 {
   transform: translate(-50%, -50%);
   top: 50%;
 } 
@@ -389,3 +395,12 @@
   100% { transform: translateY(0px);}
 }
 
+
+
+input, select, textarea {
+  @apply border border-white-alpha-20 bg-eerie-black-2 text-white placeholder:text-white mb-10 block
+}
+
+input, select {
+  @apply px-6 py-6
+}
