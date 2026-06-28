@@ -396,6 +396,12 @@
 }
 
 
+@keyframes feature {
+  0% { transform: scale(1); }
+  50% { transform: scale(0) rotate(90deg); }
+  100% { transform: scale(1); }
+}
+
 
 input, select, textarea {
   @apply border border-white-alpha-20 bg-eerie-black-2 text-white placeholder:text-white mb-10 block

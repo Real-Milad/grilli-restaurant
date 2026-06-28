@@ -4,7 +4,7 @@ export const BookOnline = () => {
 
 
   return (
-    <div className="flex flex-col w-[93%] bg-smoky-black-2 mx-auto mt-20 py-18 lg:flex-row lg:w-[80%] lg:py-0">
+    <div className="flex flex-col w-[93%] bg-smoky-black-2 mx-auto mt-20 pt-18 lg:flex-row lg:w-[80%] lg:py-0">
 
       <div className="px-7 md:px-0 lg:flex-2 lg:py-20 lg:px-15">
         <h2 className="text-6xl font-Story mb-3 lg:text-8xl">Online Reservation</h2>
@@ -41,7 +41,7 @@ export const BookOnline = () => {
         </div>
       </div>
 
-      <div className="relative overflow-hidden text-center bg-[url(/form-pattern.png)] w-full py-20 lg:flex-1">
+      <div className="relative overflow-hidden text-center bg-[url(/form-pattern.png)] w-full  pt-20 lg:flex-1">
 
         <p className="font-secondary text-5xl mb-20 lg:text-8xl">Contact Us</p>
 

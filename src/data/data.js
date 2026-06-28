@@ -27,3 +27,28 @@ export const menu = [
     info: "Avocados with crab meat, red onion, crab salad stuffed red bell pepper"
   },
 ]
+
+
+// ---------------------------------------------------------------------------------------------------
+import { featureImg } from "./imgData.js";
+const { feature1, feature2, feature3, feature4 } = featureImg
+
+export const feature = [
+  {
+    id: 100, img: feature1, title: "Hygienic Food",
+    info: "Lorem Ipsum is simply dummy printing and typesetting."
+  },
+  {
+    id: 200, img: feature2, title: "Fresh Environment",
+    info: "Lorem Ipsum is simply dummy printing and typesetting."
+  },
+  {
+    id: 300, img: feature3, title: "Skilled Chefs",
+    info: "Lorem Ipsum is simply dummy printing and typesetting."
+  },
+  {
+    id: 400, img: feature4, title: "Event & Party",
+    info: "Lorem Ipsum is simply dummy printing and typesetting."
+  },
+]
+// -----------------------------------------------------------------------------------------------

@@ -6,7 +6,7 @@ import shape5 from "../../assets/shape-5.png"
 export const Menu = () => {
 
   return (
-    <section className="w-full py-25 px-6 flex-center flex-col gap-9 relative">
+    <section className="w-full py-25 px-6 flex-center flex-col gap-9 relative overflow-hidden">
 
       <img src={shape5} alt="" className="absolute top-2 left-2 -z-1" />
 

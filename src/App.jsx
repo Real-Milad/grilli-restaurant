@@ -1,5 +1,6 @@
 import { About } from "./components/core/About"
 import { BookOnline } from "./components/core/BookOnline"
+import { Features } from "./components/core/Features"
 import { Header } from "./components/core/Header"
 import { Hero } from "./components/core/Hero"
 import { Menu } from "./components/core/Menu"
@@ -20,6 +21,7 @@ export const App = () => {
       <Special />
       <Menu />
       <Reserve />
+      <Features />
     </div>
   )
 }
