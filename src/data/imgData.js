@@ -18,3 +18,8 @@ import feature2 from "../assets/features-icon-2.png";
 import feature3 from "../assets/features-icon-3.png";
 import feature4 from "../assets/features-icon-4.png";
 export const featureImg = { feature1, feature2, feature3, feature4 };
+
+import event1 from "../assets/event-1.jpg";
+import event2 from "../assets/event-2.jpg";
+import event3 from "../assets/event-3.jpg";
+export const eventImg = { event1, event2, event3 }

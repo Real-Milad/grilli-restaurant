@@ -1,6 +1,8 @@
-import { menuImages } from "./imgData.js";
-const { menu1, menu2, menu3, menu4, menu5, menu6 } = menuImages;
+import { eventImg, menuImages, featureImg } from "./imgData.js";
 
+// ------------------------------------------------------------------------------------------------
+
+const { menu1, menu2, menu3, menu4, menu5, menu6 } = menuImages;
 export const menu = [
   {
     id: 1, img: menu1, title: "Greek Salad", tag: "Seasonal", price: "$25.50", 
@@ -28,11 +30,9 @@ export const menu = [
   },
 ]
 
-
 // ---------------------------------------------------------------------------------------------------
-import { featureImg } from "./imgData.js";
-const { feature1, feature2, feature3, feature4 } = featureImg
 
+const { feature1, feature2, feature3, feature4 } = featureImg
 export const feature = [
   {
     id: 100, img: feature1, title: "Hygienic Food",
@@ -52,3 +52,10 @@ export const feature = [
   },
 ]
 // -----------------------------------------------------------------------------------------------
+
+const { event1, event2, event3 } = eventImg;
+export const eventData = [
+  { id: 1, img: event1, title: "Food, Flavour", date: "15/09/2022", },
+  { id: 2, img: event2, title: "Healthy Food", date: "08/09/2022", },
+  { id: 3, img: event3, title: "Recipie", date: "03/09/2022", },
+]
