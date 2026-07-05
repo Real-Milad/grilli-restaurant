@@ -4,7 +4,7 @@ import { Subtitle } from "../shared/Subtitle"
 export const Features = () => {
   
   return (
-    <div className="w-full mt-540 px-10 pb-20 md:mt-430 lg:mt-270 lg:px-50">
+    <div className="w-full mt-540 px-10 pb-20 md:mt-390 lg:mt-220 lg:px-50">
 
       <Subtitle title="Why Choose Us"/>
 

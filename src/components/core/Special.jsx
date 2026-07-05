@@ -4,7 +4,7 @@ const {badge, seperator, shape6, shape9, specialBanner} = specialImages;
 export const Special = () => {
 
   return (
-    <section className="w-full flex-center flex-col gap-40 pb-30 relative bg-smoky-black-1   lg:flex-row lg:pb-0 lg:h-screen">
+    <section id="Chefs" className="w-full flex-center flex-col gap-40 pb-30 relative bg-smoky-black-1   lg:flex-row lg:pb-0 lg:h-screen">
 
       <img src={shape9} alt="" className="hidden absolute -bottom-60 right-10 lg:block"/>
       <img src={shape6} alt="" className="hidden absolute top-20 right-0 w-200 lg:block"/>
@@ -22,7 +22,7 @@ export const Special = () => {
           <img src={seperator} className="w-50"/>
         </div>
 
-        <h1 className="font-Story text-7xl tracking-widest my-10 md:text-8xl lg:text-[90px]">Lobster Tortellini</h1>
+        <h1 className="font-Story text-7xl tracking-widest my-10 md:text-8xl lg:text-[60px]">Lobster Tortellini</h1>
 
         <p className="px-8 text-[16px] mb-20 md:px-40 lg:px-0 lg:pr-70">
           Lorem Ipsum is simply dummy text of the printingand typesetting industry lorem Ipsum has been

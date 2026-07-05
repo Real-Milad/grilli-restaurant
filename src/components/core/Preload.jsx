@@ -1,34 +1,32 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { DNA } from "react-loader-spinner"
 
 export const Preload = () => {
   const [load, setLoad] = useState(false);
 
-  
-  // Closed Preload Screen After Window Loaded \\
-  window.addEventListener("load", () => {
-    setTimeout(() => {
+  useEffect(() => {
+    document.body.classList.toggle("preloading", !load);
+
+    const timer = setTimeout(() => {
       setLoad(true);
-      document.body.classList.add('laoded');
     }, 3000);
-  });
+
+    return () => clearTimeout(timer);
+
+  }, [load]);
 
 
   return (
-    <div className={`
-      fixed inset-0 flex-center flex-col bg-gold-crayola duration-400
-      z-80 ${load && "delay-500 duration-900 translate-y-full"}`}>
+    <div className={`fixed inset-0 flex-center flex-col z-20 delay-500 
+    duration-900 bg-gold-crayola ${load && "translate-y-full"}`}>
 
-      {/* Loading Circle */}
-      <div className={`
-        size-45 mb-11 border-3 rounded-circle duration-250 animate-spin
-        border-[#ecdbbd] border-t-[#b59763] ${load && "opacity-0"}
-      `}></div>
+      <div className={`duration-250 ${load && "opacity-0"}`}>
+        <DNA height="200" width="200" dnaColorOne="#b59763" dnaColorTwo="#b59763" />
+      </div>
 
-      {/* Loading Text */}
       <p className={`
-        text-[90px] font-bold font-gwen leading-60 tracking-[16px] ps-4
-        text-transparent bg-size-[500%] bg-clip-text bg-loading-text 
-        animate-[loadingText_2s_linear_infinite] duration-250 
+        text-[100px] font-Neonderthaw leading-60 tracking-[16px] text-transparent 
+        bg-size-[500%] bg-clip-text bg-loading-text animate-preload-text duration-250 
         ${ load && "opacity-0" }
       `}>Grilli</p>
 

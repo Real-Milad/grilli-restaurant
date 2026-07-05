@@ -23,3 +23,10 @@ import event1 from "../assets/event-1.jpg";
 import event2 from "../assets/event-2.jpg";
 import event3 from "../assets/event-3.jpg";
 export const eventImg = { event1, event2, event3 }
+
+
+
+// import grilliLogo from "../assets/logo.svg";
+// import separator from "../assets/separator.svg";
+// import goldPattern from "../assets/gold-pattern.svg";
+// import footerSidePattern from "../assets/footer-side-pattern.svg";

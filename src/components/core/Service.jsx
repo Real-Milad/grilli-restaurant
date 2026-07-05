@@ -20,11 +20,11 @@ const services = [
 export const Service = () => {
 
   return (
-    <div className="bg-smoky-black-2 w-full pt-30 flex-center flex-col relative overflow-hidden">
+    <div className="bg-smoky-black-2 w-full pt-30 flex-center flex-col relative overflow-hidden z-2">
       <Subtitle title="Flavors For Royalty" />
       <h1 className="font-Story text-[42px] md:text-[50px] md:mb-17 tracking-widest my-13 lg:text-8xl">We Offer Top Notch</h1>
 
-      <p className="text-center w-150 mb-30">
+      <p className="text-center w-150 mb-30 text-[16px]">
         Lorem Ipsum is simply dummy text of the printing 
         and typesetting industry lorem Ipsum has been the
         industrys standard dummy text ever.
@@ -43,7 +43,7 @@ export const Service = () => {
 
             <div className="mt-20 flex-center flex-col mb-30">
               <h3 className="text-[22px] mb-2">{item.title}</h3>
-              <a href="#" className="text-gold-crayola ">View Menu</a>
+              <a href="#" className="text-gold-crayola text-[15px]">View Menu</a>
             </div>
           </div>
         )}

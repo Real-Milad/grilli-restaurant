@@ -1,21 +1,20 @@
-import { About } from "./components/core/About"
-import { BookOnline } from "./components/core/BookOnline"
-import { Event } from "./components/core/Event"
-import { Features } from "./components/core/Features"
-import { Footer } from "./components/core/Footer"
-import { Header } from "./components/core/Header"
-import { Hero } from "./components/core/Hero"
-import { Menu } from "./components/core/Menu"
-import { Preload } from "./components/core/Preload"
-import { Reserve } from "./components/core/Reserve"
-import { Service } from "./components/core/Service"
-import { Special } from "./components/core/Special"
+import { Hero } from "./components/core/Hero";
+import { Menu } from "./components/core/Menu";
+import { About } from "./components/core/About";
+import { Event } from "./components/core/Event";
+import { Header } from "./components/core/Header";
+import { Footer } from "./components/core/Footer";
+import { Service } from "./components/core/Service";
+import { Special } from "./components/core/Special";
+import { Preload } from "./components/core/Preload";
+import { Reserve } from "./components/core/Reserve";
+import { Features } from "./components/core/Features";
 
 export const App = () => {
-
+  
   return (
     <div>
-      {/* <Preload /> */}
+      <Preload />
       <Header />
       <Hero />
       <Service />

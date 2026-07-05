@@ -11,7 +11,7 @@ export const Footer = () => {
 
   return (
 
-    <div className="bg-[url(/footer-bg.jpg)] bg-no-repeat bg-cover bg-center pt-30 px-10 pb-25 md:px-25 lg:grid lg:grid-cols-3 relative lg:pb-60">
+    <div className="bg-[url(/footer-bg.jpg)] bg-no-repeat text-[16px] md:text-[20px] bg-cover bg-center pt-30 px-10 pb-25 md:px-25 lg:grid lg:grid-cols-3 relative lg:pb-60">
 
       <div className="bg-[url(/form-pattern.png)] relative text-center bg-neutral-900/70 overflow-hidden py-20 px-15 lg:col-start-2 lg:row-start-1">
         <img src={logo} alt="" className=" mx-auto mb-20" />
@@ -49,7 +49,7 @@ export const Footer = () => {
         <a className="hover:text-gold-crayola uppercase text-[14px] tracking-[4px] text-neutral-300 transition hover-underline pb-2">Google Map</a>
       </div>
 
-      <p className="text-center absolute bottom-20 left-1/2 translate-x-[-50%]  text-neutral-500">© 2026 Grilli. All Rights Reserved | Crafted by <span className="text-gold-crayola">Real-Milad</span></p>
+      <p className="text-center w-100 md:w-200 absolute bottom-20 left-1/2 translate-x-[-50%] text-neutral-500">© 2026 Grilli. All Rights Reserved | Crafted by <span className="text-gold-crayola">Real-Milad</span></p>
       
       
     </div>

@@ -6,7 +6,7 @@ import shape5 from "../../assets/shape-5.png"
 export const Menu = () => {
 
   return (
-    <section className="w-full py-25 px-6 flex-center flex-col gap-9 relative overflow-hidden">
+    <section id="Menu" className="w-full py-25 px-6 flex-center flex-col gap-9 relative overflow-hidden">
 
       <img src={shape5} alt="" className="absolute top-2 left-2 -z-1" />
 
@@ -25,7 +25,7 @@ export const Menu = () => {
             <div className="flex-2 relative">
               <span className="font-Story text-[22px] md:text-[25px] tracking-widest mr-7">{item.title}</span>
 
-              {item.tag !== "" && <span className="bg-gold-crayola text-neutral-700 py-2 px-5 font-secondary font-bold mr-5">{item.tag}</span>}
+              {item.tag !== "" && <span className="bg-gold-crayola text-neutral-700 py-2 px-5 text-[15px] font-secondary font-bold mr-5">{item.tag}</span>}
 
               <p className="text-gold-crayola font-bold text-[22px] relative font-secondary mt-2 lg:absolute lg:right-10 lg:inline">{item.price}</p>
 

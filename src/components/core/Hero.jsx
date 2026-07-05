@@ -35,11 +35,11 @@ export const Hero = () => {
 
 
   return (
-    <section className="relative py-32 min-h-screen z-1 text-center overflow-hidden">
+    <section id="Home" className="relative py-32 min-h-screen z-2 text-center overflow-hidden">
 
       {slides.map((slide, i) =>
         <div className={`
-          slider-item   w-full h-full grid absolute top-[50%] left-[50%] z-2
+          slider-item  w-full h-full grid absolute top-[50%] left-[50%] z-2
           -translate-1/2 place-content-center transition-all duration-1000
           ${index === i ? "active opacity-100 visible" : "opacity-0 invisible"}
         `}>
@@ -48,28 +48,24 @@ export const Hero = () => {
             <img src={slide.image} key={i} width={1880} height={950} className="w-full h-full object-cover"/>
           </div>
 
-          <p className="slider-reveal text-[10px] relative font-bold tracking-[5px] mx-auto uppercase text-gold-crayola mb-4 
+          <p className="slider-reveal text-[12px] relative font-bold tracking-[5px] mx-auto uppercase text-gold-crayola mb-4 
             md:text-[18px] lg:text-[15px] lg:mt-50 ">
             {slide.subtitle}
           </p>
 
-          <img src={seperator} className="slider-reveal w-50 mx-auto mb-15 md:mb-20  "/>
+          <img src={seperator} className="slider-reveal w-50 mx-auto mb-15 md:mb-20 "/>
 
-          <h1 className="hero-title slider-reveal text-neutral-300 text-[50px] leading-25 tracking-[5px] font-Story mb-9 
+          <h1 className="hero-title slider-reveal text-neutral-300 text-[50px] leading-25 tracking-[5px] font-Story mb-20 
             md:text-[75px] md:leading-35 md:mb-20 lg:text-[120px] lg:tracking-[9px] lg:leading-60 lg:mb-25">
             {slide.title1} <br /> {slide.title2}
           </h1>
           
-          <p className="hero-text text-gold-crayola/80 slider-reveal font-primary tracking-wider mb-10
+          <p className="hero-text text-gold-crayola/80 slider-reveal font-primary tracking-wider mb-10 text-[15px]
             md:text-[20px] md:mb-20 lg:text-[22px] w-110 md:w-150 lg:w-300 mx-auto">
             Come with family & feel the joy of mouthwatering food
           </p>
-
-          {/* <Button title="View Our Menu" /> */}
-          <a href="#" className="btn mx-auto btn-primary slider-reveal">
-            <span className="text text-1">View Our Menu</span>
-            <span className="text text-2">View Our Menu</span>
-          </a>
+          
+          <Button title="View Our Menu" hidden={true} margin={true} />
 
         </div>
       )}

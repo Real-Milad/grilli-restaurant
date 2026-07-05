@@ -7,14 +7,14 @@ import { BookOnline } from "./BookOnline";
 export const Reserve = () => {
 
   return (
-    <section className="relative z-0">
+    <section id="Contact" className="relative z-0">
       <div className="text-center">
         <img src={background} alt="background" className="h-300 object-cover lg:w-full"/>
 
         <div className="absolute top-30 text-center z-0 lg:w-full">
           <p className="text-9xl">”</p>
 
-          <p className="text-[24px] font-secondary px-8 mb-15 lg:text-8xl lg:px-60">
+          <p className="text-[24px] font-secondary px-8 mb-15 lg:text-7xl lg:px-60">
             I wanted to thank you for inviting me down for that amazing
             dinner the other night. The food was extraordinary.
           </p>

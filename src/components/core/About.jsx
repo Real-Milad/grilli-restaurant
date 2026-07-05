@@ -31,7 +31,7 @@ export const About = () => {
   })
 
   return (
-    <section className="w-full flex-center flex-col gap-10 text-center bg-eerie-black-1 py-25 lg:flex-row lg:px-20">
+    <section id="About" className="w-full flex-center flex-col gap-10 text-center bg-eerie-black-1 py-25 lg:flex-row lg:px-20 z-20">
 
       <div className="flex-1">
         <Subtitle title="Our Story"/>
@@ -44,14 +44,11 @@ export const About = () => {
           of type and scrambled it to make a type specimen book It has survived not only five.
         </p>
 
-        <p className="font-bold">Book Through Call</p>
+        <p className="font-bold text-[16px]">Book Through Call</p>
 
-        <a href="tel:+88123123456" className="body-1 contact-number hover-underline mb-10">+88-123-123456</a>
+        <a href="tel:+88123123456" className="text-[17px] font-bold contact-number hover-underline mb-10">+88-123-123456</a>
 
-        <a href="#" className="btn mx-auto btn-primary">
-          <span className="text text-1">Read More</span>
-          <span className="text text-2">Read More</span>
-        </a>
+        <Button title="Read More" hidden={false} margin={true} />
         <img src={shape3} alt="" className="hidden lg:block" />
       </div>
 
